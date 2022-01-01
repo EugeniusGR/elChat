@@ -1,6 +1,8 @@
+import {ChatScreen} from "./views";
+
 const App = () => {
   return (
-    <span>Hello</span>
+    <ChatScreen />
   )
 }
 
