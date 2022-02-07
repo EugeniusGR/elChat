@@ -1,0 +1,49 @@
+@import '../../styles/helpers.scss';
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom left, $red, $purple);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+
+  .input {
+    width: 250px;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 22px;
+    background-color: #ffffff60;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 20px 5px;
+
+    &:active {
+      border: none;
+    }
+  }
+
+  .newRoom {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input {
+      width: 150px;
+      height: 36px;
+      font-size: 22px;
+      background-color: #ffffff60;
+      color: white;
+      border: 1px solid #fff;
+      border-radius: 20px 5px;
+
+      &:active {
+        border: none;
+      }
+    }
+  }
+}

@@ -8,36 +8,36 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(jsx|js)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [[
-              '@babel/preset-env', {
-                targets: {
-                  esmodules: true
-                }
-              }],
-              '@babel/preset-react']
-          }
-        }
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: {
+                    esmodules: true,
+                  },
+                },
+              ],
+              '@babel/preset-react',
+            ],
+          },
+        },
       },
       {
         test: [/\.s[ac]ss$/i, /\.css$/i],
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      }
-    ]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
   },
   resolve: {
     extensions: ['.js'],
   },
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'build',),
+    path: path.resolve(__dirname, 'build'),
   },
 };
