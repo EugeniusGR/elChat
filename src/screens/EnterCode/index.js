@@ -1,1 +1,1 @@
-export { default } from './EnterCode.jsx';
+export { default } from './EnterCode';

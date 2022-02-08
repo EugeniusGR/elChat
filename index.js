@@ -1,9 +1,13 @@
 const electron = require('electron');
 
-const {app, BrowserWindow} = electron;
+const { app, BrowserWindow } = electron;
 
 let mainWindow;
 app.on('ready', () => {
-    mainWindow = new BrowserWindow({});
-    mainWindow.loadFile('src/index.html');
-})
+  mainWindow = new BrowserWindow({
+    width: 1200,
+    height: 800,
+    webPreferences: { nodeIntegration: true, contextIsolation: false },
+  });
+  mainWindow.loadFile('src/index.html');
+});

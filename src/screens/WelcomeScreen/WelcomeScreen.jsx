@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { useRecoilState } from 'recoil';
+import { getAllMessages } from '../../api';
 import { RoutesPath } from '../../constants';
 import styles from './WelcomeScreen.module.scss';
 
 const WelcomeScreen = () => {
+  getAllMessages('6202ece6ebdcb3be5c253829');
   return (
     <div className={styles.wrapper}>
       <h2>Welcome to SecretConvers</h2>
