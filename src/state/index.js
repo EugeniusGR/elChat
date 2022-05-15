@@ -1,7 +1,13 @@
 import { atom } from 'recoil';
 
-const conversationData = atom({
-  conversationId: '',
+const imagesData = atom({
+  key: 'images',
+  default: [],
 });
 
-export { conversationData };
+const savePath = atom({
+  key: 'path',
+  default: '',
+});
+
+export { imagesData, savePath };
